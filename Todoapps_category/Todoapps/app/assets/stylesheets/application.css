@@ -1,0 +1,85 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff; /* Light background color */
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  h1 {
+    color: #007bff; /* Primary blue color */
+    text-align: center;
+  }
+  
+  /* Task Card Styles */
+  .task {
+    background-color: #ffffff; /* White background for tasks */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  /* Button Styles */
+  .task-actions {
+    margin: 10px 0;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-info {
+    background-color: #17a2b8; /* Info color */
+  }
+  
+  .btn-primary {
+    background-color: #007bff; /* Primary blue color */
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Success color */
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d; /* Secondary color */
+  }
+  
+  .btn:hover {
+    opacity: 0.9; /* Slightly darker on hover */
+  }
+  
+  /* Label Styles */
+  .label {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white; /* Text color */
+  }
+  
+  .label-success {
+    background-color: #28a745; /* Green for complete */
+  }
+  
+  .label-danger {
+    background-color: #dc3545; /* Red for incomplete */
+  }
+  
+  /* Navigation Styles */
+  .task-navigation {
+    text-align: center;
+    margin-top: 20px;
+  }
+  

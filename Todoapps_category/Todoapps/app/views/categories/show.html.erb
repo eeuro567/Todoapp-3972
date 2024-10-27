@@ -1,0 +1,28 @@
+<% if notice %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
+
+<div class="category-details">
+  <h2>Category Details</h2>
+  
+  <p>
+    <strong>Name:</strong> <%= @category.name %>
+  </p>
+
+  <h3>Associated Tasks:</h3>
+  <ul>
+    <% @category.tasks.each do |task| %>
+      <li>
+        <%= link_to task.name, task_path(task) %> - 
+        <span class="<%= task.status == 1 ? 'text-success' : 'text-danger' %>">
+          <%= task.status == 1 ? 'Complete' : 'Incomplete' %>
+        </span>
+      </li>
+    <% end %>
+  </ul>
+
+  <div>
+    <%= link_to "Edit this category", edit_category_path(@category), class: "btn btn-secondary" %>
+    <%= link_to "Back to categories", categories_path, class: "btn btn-secondary" %>
+  </div>
+</div>

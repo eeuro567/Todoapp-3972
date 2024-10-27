@@ -1,0 +1,33 @@
+<head>
+  <title>My Todoapp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Categories" %>
+
+<h1>Categories</h1>
+
+<div id="categories" class="container">
+  <% @categories.each do |category| %>
+    <div class="task card">
+      <div class="card-body">
+        <%= render category %>
+        <p class="task-actions">
+          <%= link_to "Show this category", category, class: "btn btn-info" %>
+          <%= button_to "Destroy this category  (Cannot dectroy when task inside)", category, method: :delete, class: "btn btn-info" %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="task-navigation">
+  <%= link_to "New category", new_category_path, class: "btn btn-success" %>
+  <%= link_to "Back to Tasks", tasks_path, class: "btn btn-secondary" %>
+</div>
